@@ -1,0 +1,21 @@
+Index: src/test/java/Logintest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.chrome.ChromeDriver;\r\nimport org.testng.annotations.Test;\r\n\r\npublic class Logintest\r\n{\r\n    @Test\r\n    public void ValidTest()\r\n    {\r\n        System.setProperty(\"webdriver.chrome.driver\",\"src/test/resources/chromedriver.exe\");\r\n        WebDriver driver = new ChromeDriver();\r\n        driver.get(\"https://www.google.com/\");\r\n\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/test/java/Logintest.java b/src/test/java/Logintest.java
+--- a/src/test/java/Logintest.java	
++++ b/src/test/java/Logintest.java	
+@@ -7,9 +7,10 @@
+     @Test
+     public void ValidTest()
+     {
++
+         System.setProperty("webdriver.chrome.driver","src/test/resources/chromedriver.exe");
+         WebDriver driver = new ChromeDriver();
+         driver.get("https://www.google.com/");
+ 
+     }
+-}
++}
+\ No newline at end of file
